@@ -18,4 +18,8 @@ public class AuthorDataRepository implements AuthorRepository {
         return authorMemLocalDataSource.findAll();
     }
 
+    @Override
+    public void saveAuthor(Author author) {
+        authorMemLocalDataSource.save(author);
+    }
 }
