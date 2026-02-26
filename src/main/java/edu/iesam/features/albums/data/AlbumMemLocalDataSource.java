@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class AlbumMemLocalDataSource {
 
-    private static AlbumMemLocalDataSource instance = null;
 
     private ArrayList<Album> storage = new ArrayList<>();
 
@@ -28,11 +27,5 @@ public class AlbumMemLocalDataSource {
         System.out.println(album);
     }
 
-    public static AlbumMemLocalDataSource newInstance(){
-        if (instance == null){
-            instance = new AlbumMemLocalDataSource();
-        }
 
-        return instance;
-    }
 }

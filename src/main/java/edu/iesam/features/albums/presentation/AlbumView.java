@@ -11,8 +11,7 @@ public class AlbumView {
 
 
     public static void printAlbums(){
-        GetAlbumsUseCase getAlbumsUseCase = new GetAlbumsUseCase(
-                new AlbumDataRepository(AlbumMemLocalDataSource.newInstance())
+        GetAlbumsUseCase getAlbumsUseCase = new GetAlbumsUseCase(new AlbumDataRepository(new AlbumMemLocalDataSource())
         );
         ArrayList<Album> albums = getAlbumsUseCase.execute();
         System.out.println(albums);
