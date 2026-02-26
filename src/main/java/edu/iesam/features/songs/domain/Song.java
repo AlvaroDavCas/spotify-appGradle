@@ -8,6 +8,14 @@ public class Song {
     private String genre;
     private String duration;
 
+    public Song(String id, String title, String author, String genre, String duration) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.duration = duration;
+    }
+
     public String getId() {
         return id;
     }
