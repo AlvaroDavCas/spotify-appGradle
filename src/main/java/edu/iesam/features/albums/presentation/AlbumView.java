@@ -8,6 +8,7 @@ import edu.iesam.features.albums.domain.SaveAlbumsUseCase;
 
 import java.util.ArrayList;
 
+
 public class AlbumView {
 
 
@@ -23,7 +24,7 @@ public class AlbumView {
 
         SaveAlbumsUseCase saveAlbumsUseCase = new SaveAlbumsUseCase(new AlbumDataRepository(AlbumMemLocalDataSource.newInstance()));
 
-        SaveAlbumsUseCase.execute(newAlbum);
+        saveAlbumsUseCase.execute(newAlbum);
     }
 
 }
