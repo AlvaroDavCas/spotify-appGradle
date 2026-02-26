@@ -1,8 +1,5 @@
 package edu.iesam.features.songs.data;
 
-
-
-import edu.iesam.features.authors.domain.Author;
 import edu.iesam.features.songs.domain.Song;
 import edu.iesam.features.songs.domain.SongRepository;
 
@@ -24,5 +21,10 @@ public class SongDataRepository implements SongRepository {
     @Override
     public void saveSong(Song song) {
         songMemLocalDataSource.save(song);
+    }
+
+    @Override
+    public void deleteSong(String songId) {
+        songMemLocalDataSource.delete(songId);
     }
 }
