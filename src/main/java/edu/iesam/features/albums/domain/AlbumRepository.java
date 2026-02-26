@@ -8,4 +8,5 @@ public interface AlbumRepository {
 
     ArrayList<Album> getAlbums();
     public void saveAlbum(Album album);
+    public void deleteAlbum(String albumId);
 }
