@@ -4,6 +4,7 @@ import edu.iesam.features.albums.data.AlbumDataRepository;
 import edu.iesam.features.albums.data.AlbumMemLocalDataSource;
 import edu.iesam.features.albums.domain.Album;
 import edu.iesam.features.albums.domain.GetAlbumsUseCase;
+import edu.iesam.features.albums.domain.SaveAlbumsUseCase;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,14 @@ public class AlbumView {
         );
         ArrayList<Album> albums = getAlbumsUseCase.execute();
         System.out.println(albums);
+    }
+
+    public static void saveAlbums() {
+        Album newAlbum = new Album("2", "name2", "2000");
+
+        SaveAlbumsUseCase saveAlbumsUseCase = new SaveAlbumsUseCase(new AlbumDataRepository(AlbumMemLocalDataSource.newInstance()));
+
+        SaveAlbumsUseCase.execute(newAlbum);
     }
 
 }
