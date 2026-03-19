@@ -37,7 +37,7 @@ public class AlbumMemLocalDataSource {
     }
 
     public void delete(String albumId) {
-        albumsMemStorage.removeIf(album -> album.getId().equals(albumId));
+        storage.removeIf(album -> album.getId().equals(albumId));
     }
 
 
