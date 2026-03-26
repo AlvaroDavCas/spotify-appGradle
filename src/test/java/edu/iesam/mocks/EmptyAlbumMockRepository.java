@@ -5,17 +5,11 @@ import edu.iesam.features.albums.domain.AlbumRepository;
 
 import java.util.ArrayList;
 
-public class AlbumMockRepository implements AlbumRepository {
+public class EmptyAlbumMockRepository implements AlbumRepository {
 
     @Override
     public ArrayList<Album> getAlbums() {
         ArrayList<Album> albums = new ArrayList<>();
-        Album album1 = new Album("1","a","2000");
-        Album album2 = new Album("2","b","2000");
-        Album album3 = new Album("3","c","2000");
-        albums.add(album1);
-        albums.add(album2);
-        albums.add(album3);
         return albums;
     }
 
